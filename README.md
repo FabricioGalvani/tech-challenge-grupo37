@@ -116,14 +116,14 @@ Rotas Disponíveis e Funcionalidades
 ```
 curl -X POST http://127.0.0.1:8080/train
 ```
-![Treinamento do modelo](images/treinamento_modelo.png)
-![Modelo treinado](images/mlflow_modelo_treinado.png)
+![Treinamento do modelo](imagens/treinamento_modelo.png)
+![Modelo treinado](imagens/mlflow_modelo_treinado.png)
 
 #### b. Previsão de Preços:
 Acesse http://localhost:8080/upload no navegador.
 
 Faça upload de um arquivo CSV contendo a coluna Close (seguir o exemplo disponibilizado aqui em arquivo -> petr4_teste.csv ).
-![Upload do Arquivo CSV](images/upload_arquivocsv.png)
+![Upload do Arquivo CSV](imagens/upload_arquivocsv.png)
 
 Veja a tabela de previsões renderizada no navegador.
-![Previsao do modelo](images/previsoes_modelo.png)
+![Previsao do modelo](imagens/previsoes_modelo.png)
