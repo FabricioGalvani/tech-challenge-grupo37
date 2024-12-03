@@ -73,3 +73,34 @@ Arquivo ~/.aws/config:
 [default]
 region=SEU_REGION
 ```
+
+### 3. Construção e Execução com Docker
+Estes possos:
+
+Constrói e executa os serviços Flask e MLflow.
+
+Mapeia as portas:
+
+    8080: API Flask
+    
+    5000: Interface do MLflow
+#### a. Construir a Imagem Docker
+Execute o comando abaixo para construir a imagem Docker:
+```
+docker build -t flask-ml-app .
+```
+
+#### a. Executar o Container
+Execute o comando abaixo executar o Container Docker:
+```
+docker run -p 8080:8080 -p 5000:5000 -v mlartifacts:/app/mlartifacts flask-ml-app
+```
+
+
+Rotas Disponíveis e Funcionalidades
+| Método  | Rota | Descrição  |
+| ------------- |:-------------:|-------------  |
+| GET      | /     |Página inicial.  |
+| POST      | /upload     |Recebe um arquivo CSV, processa os dados e exibe as previsões em HTML.  |
+| POST     | /train     |Treina o modelo LSTM com dados históricos armazenados no S3.  |
+| GET     | /test-aws     |	Testa a conexão com os buckets S3 configurados. (Usada para depuração).  |
