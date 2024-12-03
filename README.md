@@ -38,10 +38,16 @@ Antes de começar, você precisará ter instalado:
             |-- templates/           # Templates HTML para renderização
                 |-- upload.html      # Página para upload do CSV
                 |-- predictions.html # Página para exibição das previsões
-    |-- Dockerfile               # Configuração do Docker para Flask
-    |-- requirements.txt         # Dependências do projeto
-    |-- docker-compose.yml       # Configuração do Docker Compose para Flask e MLflow
-    |-- README.md                # Documentação do projeto
+        |-- arquivo/
+            |-- petr4_teste.csv      # Arquivo de teste e exemplo utilizado para fazer as previsões com o modelo
+        |-- etl/
+            |-- ingestion_market_data_bronze.py      # Arquivo utilizado para ingerir os dados no s3 na camada bronze do DataLake
+            |-- ingestion_market_data_silver.py      # Arquivo utilizado para ingerir os dados no s3 na camada silver do DataLake
+        |-- Dockerfile               # Configuração do Docker para Flask
+        |-- requirements.txt         # Dependências do projeto
+        |-- docker-compose.yml       # Configuração do Docker Compose para Flask e MLflow
+        |-- README.md                # Documentação do projeto
+
 
 
 
