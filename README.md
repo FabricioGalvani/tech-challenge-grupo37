@@ -32,16 +32,16 @@ Antes de começar, você precisará ter instalado:
 ---
 
 ## Estrutura do Projeto
-project/
-├── app/
-│   ├── app.py               # Código principal do Flask
-│   ├── templates/           # Templates HTML para renderização
-│       ├── upload.html      # Página para upload do CSV
-│       ├── predictions.html # Página para exibição das previsões
-├── Dockerfile               # Configuração do Docker para Flask
-├── requirements.txt         # Dependências do projeto
-├── docker-compose.yml       # Configuração do Docker Compose para Flask e MLflow
-├── README.md                # Documentação do projeto
+    |-- project/
+        |-- app/
+            |-- app.py               # Código principal do Flask
+            |-- templates/           # Templates HTML para renderização
+                |-- upload.html      # Página para upload do CSV
+                |-- predictions.html # Página para exibição das previsões
+    |-- Dockerfile               # Configuração do Docker para Flask
+    |-- requirements.txt         # Dependências do projeto
+    |-- docker-compose.yml       # Configuração do Docker Compose para Flask e MLflow
+    |-- README.md                # Documentação do projeto
 
 
 
@@ -50,5 +50,6 @@ project/
 ### 1. Clone o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/seu-usuario/tech-challenge-grupo37.git
+cd tech-challenge-grupo37
+
