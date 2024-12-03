@@ -32,7 +32,17 @@ Antes de começar, você precisará ter instalado:
 ---
 
 ## Estrutura do Projeto
-project/ ├── app/ │ ├── app.py # Código principal do Flask │ ├── templates/ # Templates HTML para renderização │ ├── upload.html # Página de upload │ ├── predictions.html # Página de exibição das previsões ├── Dockerfile # Configuração do Docker para Flask ├── requirements.txt # Dependências do projeto ├── docker-compose.yml # Configuração do Docker Compose para Flask e MLflow ├── README.md # Documentação do projeto
+project/
+├── app/
+│   ├── app.py               # Código principal do Flask
+│   ├── templates/           # Templates HTML para renderização
+│       ├── upload.html      # Página para upload do CSV
+│       ├── predictions.html # Página para exibição das previsões
+├── Dockerfile               # Configuração do Docker para Flask
+├── requirements.txt         # Dependências do projeto
+├── docker-compose.yml       # Configuração do Docker Compose para Flask e MLflow
+├── README.md                # Documentação do projeto
+
 
 
 ## Configuração
