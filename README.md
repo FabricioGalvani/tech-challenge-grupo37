@@ -55,7 +55,7 @@ Antes de começar, você precisará ter instalado:
 ### 1. Clone o Repositório
 
 ```
-git clone https://github.com/seu-usuario/tech-challenge-grupo37.git
+git clone https://github.com/FabricioGalvani/tech-challenge-grupo37.git
 cd tech-challenge-grupo37
 ```
 
