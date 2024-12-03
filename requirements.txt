@@ -1,0 +1,11 @@
+Flask
+pandas
+numpy
+mlflow
+scikit-learn
+joblib
+keras
+tensorflow
+boto3
+psycopg2-binary
+awswrangler
