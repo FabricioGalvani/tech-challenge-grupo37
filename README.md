@@ -49,7 +49,27 @@ Antes de começar, você precisará ter instalado:
 
 ### 1. Clone o Repositório
 
-```bash
+```
 git clone https://github.com/seu-usuario/tech-challenge-grupo37.git
 cd tech-challenge-grupo37
+```
 
+### 2. Configuração das Credenciais da AWS
+O projeto utiliza awswrangler para acessar dados do S3. Para que isso funcione, é necessário configurar as credenciais da AWS.
+
+#### a. Usando ~/.aws
+
+Certifique-se de que o diretório ~/.aws no seu sistema contém os arquivos credentials e config com suas credenciais e configs.
+
+Arquivo ~/.aws/credentials:
+```
+[default]
+aws_access_key_id=SEU_ACCESS_KEY
+aws_secret_access_key=SEU_SECRET_KEY
+```
+
+Arquivo ~/.aws/config:
+```
+[default]
+region=SEU_REGION
+```
