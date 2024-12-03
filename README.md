@@ -12,7 +12,7 @@ Além disso, o projeto é executado dentro de contêineres Docker, incluindo o *
 ## Funcionalidades
 
 1. **Treinamento do Modelo**:
-   - A rota `/train` permite treinar um modelo LSTM com dados históricos do S3.
+   - A rota `/train` permite treinar um modelo LSTM com dados históricos armazenados no S3.
 
 2. **Previsão de Preços**:
    - A rota `/upload` aceita um arquivo CSV com dados históricos e retorna os preços previstos em uma tabela HTML formatada.
@@ -47,7 +47,6 @@ Antes de começar, você precisará ter instalado:
         |-- requirements.txt         # Dependências do projeto
         |-- docker-compose.yml       # Configuração do Docker Compose para Flask e MLflow
         |-- README.md                # Documentação do projeto
-
 
 
 
@@ -97,7 +96,7 @@ docker build -t flask-ml-app .
 ```
 
 #### a. Executar o Container
-Execute o comando abaixo executar o Container Docker:
+Execute o comando abaixo para executar o Container Docker:
 ```
 docker run -p 8080:8080 -p 5000:5000 -v mlartifacts:/app/mlartifacts flask-ml-app
 ```
@@ -110,3 +109,21 @@ Rotas Disponíveis e Funcionalidades
 | POST      | /upload     |Recebe um arquivo CSV, processa os dados e exibe as previsões em HTML.  |
 | POST     | /train     |Treina o modelo LSTM com dados históricos armazenados no S3.  |
 | GET     | /test-aws     |	Testa a conexão com os buckets S3 configurados. (Usada para depuração).  |
+
+
+### 4. Exemplo de Uso
+#### a. Treinamento do Modelo:
+```
+curl -X POST http://127.0.0.1:8080/train
+```
+![Treinamento do modelo](images/treinamento_modelo.png)
+![Modelo treinado](images/mlflow_modelo_treinado.png)
+
+#### b. Previsão de Preços:
+Acesse http://localhost:8080/upload no navegador.
+
+Faça upload de um arquivo CSV contendo a coluna Close (seguir o exemplo disponibilizado aqui em arquivo -> petr4_teste.csv ).
+![Upload do Arquivo CSV](images/upload_arquivocsv.png)
+
+Veja a tabela de previsões renderizada no navegador.
+![Previsao do modelo](images/previsoes_modelo.png)
